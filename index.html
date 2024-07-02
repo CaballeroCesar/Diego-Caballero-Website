@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Audio Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #1a1a1a !important;
+            border-bottom: 3px solid #17a2b8;
+        }
+        .navbar-brand {
+            color: #17a2b8 !important;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        header {
+            background-color: #17a2b8;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-10px);
+        }
+        h1, h2, h3 {
+            color: #17a2b8;
+        }
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .project h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #17a2b8;
+        }
+        .project p {
+            margin-bottom: 10px;
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial p {
+            margin-bottom: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+            border-top: 3px solid #17a2b8;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0;
+            }
+            .container {
+                padding: 10px;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <h1 class="display-3">Welcome to Your Name's Audio Portfolio</h1>
+            <p class="lead">Explore my vibrant audio creations and let's make something amazing together.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="lead">Passionate about sound, I specialize in creating immersive audio experiences that captivate and inspire.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="project">
+                        <h3>Project 1 Title</h3>
+                        <p><strong>Description:</strong> Brief overview of the project.</p>
+                        <p><strong>Role:</strong> Your involvement (e.g., Sound Designer, Mixer).</p>
+                        <p><strong>Link:</strong> <a href="#">Link to project or audio sample</a></p>
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1 Image" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project">
+                        <h3>Project 2 Title</h3>
+                        <p><strong>Description:</strong> Brief overview of the project.</p>
+                        <p><strong>Role:</strong> Your involvement.</p>
+                        <p><strong>Link:</strong> <a href="#">Link to project or audio sample</a></p>
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2 Image" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Add more projects as necessary -->
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Audio Production Services</h3>
+                    <ul>
+                        <li>Sound Design</li>
+                        <li>Foley</li>
+                        <li>Voiceover Recording</li>
+                        <li>Audio Editing</li>
+                        <li>Mixing and Mastering</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Additional Services</h3>
+                    <ul>
+                        <li>Podcast Editing</li>
+                        <li>Audio Restoration</li>
+                        <li>Custom Soundtracks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"Quote from client about your work."</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p>"Another quote highlighting your skills."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more testimonials as necessary -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="https://formsubmit.co/cesar_azul31@yahoo.com" method="POST">
+                <input type="text" name="name" required>
+                 <input type="email" name="email" required>
+                 <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (for navbar toggle) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
