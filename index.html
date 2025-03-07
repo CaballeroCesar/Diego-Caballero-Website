@@ -4,253 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Caballero Audio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #1a1a1a !important;
-            border-bottom: 3px solid #17a2b8;
-        }
-        .navbar-brand {
-            color: #17a2b8 !important;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link {
-            color: #fff !important;
-            font-weight: bold;
-        }
-        header {
-            background-color: #17a2b8;
-            color: #fff;
-            text-align: center;
-            padding: 80px 0;
-            position: relative;
-        }
-        header::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -3px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 6px;
-            background-color: #fff;
-            border-radius: 10px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            border-radius: 15px;
-        }
-        section {
-            margin-bottom: 40px;
-            padding: 40px;
-            background-color: #1a1a1a;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-        section:hover {
-            transform: translateY(-10px);
-        }
-        h1, h2, h3 {
-            color: #17a2b8;
-        }
-        .project {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-        }
-        .project h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            color: #17a2b8;
-        }
-        .project p {
-            margin-bottom: 10px;
-        }
-        .testimonial {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-        .testimonial:hover {
-            transform: translateY(-5px);
-        }
-        .testimonial p {
-            margin-bottom: 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1a1a1a;
-            color: #fff;
-            border-top: 3px solid #17a2b8;
-        }
-        @media (max-width: 768px) {
-            header {
-                padding: 60px 0;
-            }
-            .container {
-                padding: 10px;
-            }
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">Diego Caballero</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header id="home">
+    <!-- Hero Section -->
+    <header id="home" class="text-center py-5">
         <div class="container">
             <h1 class="display-3">Diego Caballero Audio</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="lead">Expert sound design and audio production services.</p>
         </div>
     </header>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio</h2>
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="project">
-                        <h3>Project 1 Title</h3>
-                        <p><strong>Description:</strong> Brief overview of the project.</p>
-                        <p><strong>Role:</strong> Your involvement (e.g., Sound Designer, Mixer).</p>
-                        <p><strong>Link:</strong> <a href="#">Link to project or audio sample</a></p>
-                        <img src="https://via.placeholder.com/400x250" alt="Project 1 Image" class="img-fluid">
-                    </div>
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="col-lg-6">
-                    <div class="project">
-                        <h3>Project 2 Title</h3>
-                        <p><strong>Description:</strong> Brief overview of the project.</p>
-                        <p><strong>Role:</strong> Your involvement.</p>
-                        <p><strong>Link:</strong> <a href="#">Link to project or audio sample</a></p>
-                        <img src="https://via.placeholder.com/400x250" alt="Project 2 Image" class="img-fluid">
-                    </div>
-                </div>
-                <!-- Add more projects as necessary -->
-            </div>
-        </section>
-
-        <section id="services">
-            <h2>Services</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3>Audio Production Services</h3>
-                    <ul>
-                        <li>Sound Design</li>
-                        <li>Foley</li>
-                        <li>Voiceover Recording</li>
-                        <li>Audio Editing</li>
-                        <li>Mixing and Mastering</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <h3>Additional Services</h3>
-                    <ul>
-                        <li>Podcast Editing</li>
-                        <li>Audio Restoration</li>
-                        <li>Custom Soundtracks</li>
-                    </ul>
+                    <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="About Me Image">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="testimonials">
-            <h2>Testimonials</h2>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Portfolio</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card bg-secondary text-white">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1 Title</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-secondary text-white">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2 Title</h5>
+                            <p class="card-text">Brief description of the project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center text-white mb-4">Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card text-white bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Audio Production</h5>
+                            <ul>
+                                <li>Sound Design</li>
+                                <li>Foley</li>
+                                <li>Voiceover Recording</li>
+                                <li>Mixing & Mastering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-white bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Podcast Editing</h5>
+                            <ul>
+                                <li>Audio Restoration</li>
+                                <li>Custom Soundtracks</li>
+                                <li>Audio Editing & Mixing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center text-white mb-5">What Clients Say</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="testimonial">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="card text-white bg-secondary">
+                        <div class="card-body">
+                            <p>"Diego's sound design work brought our project to life. Highly recommend!"</p>
+                            <footer class="blockquote-footer text-white">Client Name</footer>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="testimonial">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                    <div class="card text-white bg-secondary">
+                        <div class="card-body">
+                            <p>"Excellent service and attention to detail. We were blown away by the results!"</p>
+                            <footer class="blockquote-footer text-white">Client Name</footer>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Add more testimonials as necessary -->
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center text-white mb-4">Contact Me</h2>
             <form action="https://formsubmit.co/cesar_azul31@yahoo.com" method="POST">
-                <p><input style="width: 100%;" type="text" name="name" required placeholder="Name"></p>
-                <p><input style="width: 100%;" type="email" name="email" required placeholder="Email Address"></p>
-                <p><input style="width: 100%;" type="text" name="subject" required placeholder="Subject"></p>
-                <p><textarea style="width: 100%;" name="meessage" required placeholder="Message"></textarea></p>
-                <p><input style="width: 100%;" type="hidden" name="_captcha" value="false"></p>
-                <p><button type="submit">Send</button></p>
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
             </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-primary">
         <p>&copy; 2024 Diego Caballero. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS and dependencies (for navbar toggle) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
