@@ -1,170 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Caballero Audio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Production Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Hero Section with Enhanced Colors */
+    .hero-section {
+      background-image: url('your-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Darker overlay to increase contrast */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    /* Vivid Gradient for Buttons */
+    .btn-primary {
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #5f92f9, #d84ce8); /* More vibrant blue and purple */
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #d84ce8, #5f92f9); /* Hover: Reverse Gradient */
+      box-shadow: 0 5px 15px rgba(99, 105, 218, 0.4); /* Enhanced hover shadow */
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Service Cards */
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+
+    .service-card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .service-card-text {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Hover Effects on Service Cards */
+    .service-card:hover .service-card-title {
+      color: #5f92f9; /* Brightened blue on hover */
+    }
+
+    /* About Section */
+    #about {
+      background-color: #fafafa;
+      padding: 80px 0;
+    }
+
+    /* Contact Form */
+    #contact {
+      padding: 80px 0;
+    }
+
+    .wave-animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      background: linear-gradient(to right, #5f92f9, #9c4ce8); /* Brighter gradient */
+      position: relative;
+    }
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('soundwave.png') repeat-x;
+      background-size: cover;
+      animation: wave 3s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
-<body class="bg-dark text-white">
+<body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">Diego Caballero</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/DCAudio-Logo.png" alt="Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content d-flex flex-column align-items-center">
+      <img src="images/DCAudio-Logo.png" alt="Company Logo" width="300" class="mb-3">
+      <a href="#contact" class="btn btn-primary">Get In Touch</a>
+    </div>
+    <div class="wave"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container py-5">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card shadow service-card">
+          <img src="service-image-1.jpg" class="card-img-top" alt="Recording Studio">
+          <div class="card-body service-card-body">
+            <h5 class="card-title service-card-title">Recording Studio</h5>
+            <p class="card-text service-card-text">State-of-the-art equipment for your recording needs. Whether it’s music or podcasts, we’ve got you covered.</p>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="text-center py-5">
-        <div class="container">
-            <h1 class="display-3">Diego Caballero Audio</h1>
-            <p class="lead">Expert sound design and audio production services.</p>
+      </div>
+      <div class="col">
+        <div class="card shadow service-card">
+          <img src="service-image-2.jpg" class="card-img-top" alt="Mixing and Mastering">
+          <div class="card-body service-card-body">
+            <h5 class="card-title service-card-title">Mixing & Mastering</h5>
+            <p class="card-text service-card-text">Expert mixing and mastering services to make your tracks sound polished and professional.</p>
+          </div>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="About Me Image">
-                </div>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card shadow service-card">
+          <img src="service-image-3.jpg" class="card-img-top" alt="Sound Design">
+          <div class="card-body service-card-body">
+            <h5 class="card-title service-card-title">Sound Design</h5>
+            <p class="card-text service-card-text">Craft unique sounds that bring your project to life with our professional sound design services.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Portfolio</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card bg-secondary text-white">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1 Title</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-secondary text-white">
-                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2 Title</h5>
-                            <p class="card-text">Brief description of the project.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p class="lead">We are passionate about sound and dedicated to bringing your creative ideas to life. Our experienced team of audio engineers works closely with each client to deliver high-quality audio production services.</p>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-dark">
-        <div class="container">
-            <h2 class="text-center text-white mb-4">Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card text-white bg-info">
-                        <div class="card-body">
-                            <h5 class="card-title">Audio Production</h5>
-                            <ul>
-                                <li>Sound Design</li>
-                                <li>Foley</li>
-                                <li>Voiceover Recording</li>
-                                <li>Mixing & Mastering</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-white bg-info">
-                        <div class="card-body">
-                            <h5 class="card-title">Podcast Editing</h5>
-                            <ul>
-                                <li>Audio Restoration</li>
-                                <li>Custom Soundtracks</li>
-                                <li>Audio Editing & Mixing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" id="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 bg-dark">
-        <div class="container">
-            <h2 class="text-center text-white mb-5">What Clients Say</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card text-white bg-secondary">
-                        <div class="card-body">
-                            <p>"Diego's sound design work brought our project to life. Highly recommend!"</p>
-                            <footer class="blockquote-footer text-white">Client Name</footer>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white bg-secondary">
-                        <div class="card-body">
-                            <p>"Excellent service and attention to detail. We were blown away by the results!"</p>
-                            <footer class="blockquote-footer text-white">Client Name</footer>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Diego Caballero Audio. All rights reserved.</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center text-white mb-4">Contact Me</h2>
-            <form action="https://formsubmit.co/cesar_azul31@yahoo.com" method="POST">
-                <div class="mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="mb-3">
-                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-4 bg-primary">
-        <p>&copy; 2024 Diego Caballero. All rights reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
