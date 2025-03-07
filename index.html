@@ -14,16 +14,16 @@
 
     .hero-section {
       background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3l4dWx0bTU4YTRpeHhpNnN6OHhteWkzaTVud2t1aXVmNWYydHkwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yx1Tzv0P6xTji/giphy.gif');
-      background-size: 100% auto; /* Stretch width fully, height adjusts */
+      background-size: cover; /* Ensures full coverage */
       background-position: center;
       background-repeat: no-repeat;
-
-      width: 100vw; /* Full width */
-      min-height: 100vh; /* Ensures enough height, can adjust */
+      width: 100vw;
+      height: 100vh; /* Ensure it fully occupies the screen */
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      position: relative;
     }
 
     .hero-section::after {
